@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<style>
+		#newrows{
+			width: 120px;
+			height: 40px;
+			font-size: 18px;
+			background-color: #009933;
+			color: white;
+		}
+		button:hover{
+			cursor: pointer;
+		}
+	</style>
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+	<h1 style="text-align: center; font-family: bold;background:  #ffff4d;">Your To Do List</h1>
+
+	<div class="row no-gutters" >
+
+		<div class="col no-gutters">
+			<div class="leftside" style="background: #66ffff; height: 100vh; width: 100%;">
+				
+				<h2 style="text-align: center;">Remaining Task:</h2>
+				<hr>
+				<table>
+					<tr>
+						<td input="radio"></td>
+						<td><h4>Task</h4><br><input type="text" id="Task"></td>
+						<td><h4>Priority</h4><br>
+						    <select id="Priority">
+						  	   <option>low</option>
+						  	   <option>medium</option>
+						  	   <option>high</option>
+						    </select>
+						</td>
+						<td><h4>Date</h4><br><input type="date" id="date"></td>
+						<td><h4>Type</h4><br><input type="text" placeholder="work/play/personal.." id="type"></td>
+					</tr>
+					<tr>
+						<td input="radio"></td>
+						<td><input type="text" id="Task"></td>
+						<td>
+						    <select id="Priority">
+						  	   <option>low</option>
+						  	   <option>medium</option>
+						  	   <option>high</option>
+						    </select>
+						</td>
+						<td><input type="date" id="date"></td>
+						<td><input type="text" placeholder="work/play/personal.." id="type"></td>
+					</tr>  
+				</table>
+				<tr>
+						<button id="newrows">
+							add more:
+						</button>
+					</tr> 
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+			var .html = '<tr><td input="radio"></td><td><h4>Task</h4><br><input type="text" id="Task"></td><td><h4>Priority</h4><br><select id="Priority"><option>low</option><option>medium</option><option>high</option></select></td><td><h4>Date</h4><br><input type="date" id="date"></td><td><h4>Type</h4><br><input type="text" placeholder="work/play/personal.." id="type"></td></tr> '
+			$(function () {
+				$('#newrows').click(function () {
+					$('tbody').append(html);
+				})
+			})
+		</script>  
+
+		<div class="col no-gutters">
+			<div class="rightside" style="background:  #ff66b3; height:  100vh; width: 100%;">
+				
+				<h2 style="text-align: center;">Completed Task:</h2>
+				<hr>
+				<table style="margin: 20px;">
+					<tr>
+						<td input="radio"></td>
+						<td><h4>Task</h4><br></td>
+						<td><h4>Priority</h4><br></td>
+						<td><h4>Date</h4><br></td>
+						<td><h4>Type</h4><br></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
